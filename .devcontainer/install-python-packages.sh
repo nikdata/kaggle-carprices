@@ -9,4 +9,8 @@ python3 -m venv /opt/$PYTHON_ENV \
 
 source /opt/$PYTHON_ENV/bin/activate
 
-pip3 install -r ./$SETUP_FOLDER/packages.txt
+# source: https://medium.datadriveninvestor.com/boosting-docker-build-speed-slashing-python-build-times-in-half-with-uv-eb7734600cfb
+# install uv first to optimize installs of other python packages
+pip3 install uv
+
+uv pip install --no-cache -r ./$SETUP_FOLDER/packages.txt

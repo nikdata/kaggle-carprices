@@ -27,9 +27,8 @@ EXPOSE 8888
 # final stage
 FROM python:${PYTHON_VER:-3.12}-slim-bookworm
 
-# ARG PYTHON_ENV
-
-ENV PYTHON_ENV=$PYTHON_ENV
+ARG PYTHON_ENV
+ENV PYTHON_ENV=${PYTHON_ENV}
 
 COPY --from=builder /opt/${PYTHON_ENV} /opt/${PYTHON_ENV}
 

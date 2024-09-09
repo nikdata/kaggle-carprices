@@ -12,3 +12,4 @@ optuna
 pyarrow
 db-dtypes
 imbalanced-learn
+pandas
