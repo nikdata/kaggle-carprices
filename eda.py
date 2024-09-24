@@ -10,6 +10,9 @@ pl.Config.set_tbl_rows(30)
 pl.Config.set_tbl_width_chars(3000)
 pl.Config.set_tbl_cols(-1)
 
+# helpful source:
+# https://www.kaggle.com/code/ahmedabdulhamid/approaching-a-project-s4e9-1-eda/notebook
+
 # read in train & test file
 raw_train = pl.read_csv('data/train.csv', null_values=["",'-','–'])
 raw_test = pl.read_csv('data/test.csv', null_values = ['','-','–'])
